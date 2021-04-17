@@ -1,22 +1,16 @@
-import wrap, wrap_py
-from time import sleep
+import time
+
+import wrap
 
 wrap.world.create_world(450, 600, 900, 60)
-wrap
-
-wrap.sprite.add("mario-2big", 100, 300, True, "stand")
-wrap_py.sprite.change_width_proportionally(0, 50)
-
-wrap_py.sprite.add_sprite("mario-2big", 300, 300, True, "stand")
-wrap_py.sprite.set_sprite_flipx_reverse(1, True)
-wrap_py.sprite.change_width_proportionally(1, 50)
-
-sleep(1)
-
-wrap_py.sprite_actions.move_sprite_to_angle(0, 500, 100)
-sleep(1)
-wrap_py.sprite_actions.move_sprite_to_angle(1, 500, 200)
-sleep(1)
-wrap_py.sprite.hide_sprite(0)
-sleep(1)
-wrap_py.sprite.show_sprite(0)
+wrap.world.set_back_color(54, 133, 99)
+wrap.sprite.add("blue_man", 100, 500)
+wrap.sprite.add("mario", 300, 500, "stand")
+wrap.sprite.add_text("Привет, Марио", 100, 370)
+time.sleep(2)
+wrap.sprite.add_text("Привет, Джек", 300, 330)
+time.sleep(1)
+wrap.sprite.add_text("Ты мне кое-что должен", 100, 290)
+time.sleep(2)
+wrap.sprite.add_text("Не понимаю, о чем ты, Джек", 300, 250)
+exit()
