@@ -1,9 +1,10 @@
-import wrap
-import wrap_py
+import wrap, wrap_py
 from time import sleep
 
-wrap_py.world.create_world(400, 600, 930, 50)
-wrap_py.sprite.add_sprite("mario-2big", 100, 300, True, "stand")
+wrap.world.create_world(450, 600, 900, 60)
+wrap
+
+wrap.sprite.add("mario-2big", 100, 300, True, "stand")
 wrap_py.sprite.change_width_proportionally(0, 50)
 
 wrap_py.sprite.add_sprite("mario-2big", 300, 300, True, "stand")

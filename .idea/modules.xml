@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CoursePythonAdult_ru_lessons.iml" filepath="$PROJECT_DIR$/.idea/CoursePythonAdult_ru_lessons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../wds_files_general/wds_files_general/sprite_types_gen/.idea/sprite_types.iml" filepath="$PROJECT_DIR$/../wds_files_general/wds_files_general/sprite_types_gen/.idea/sprite_types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../wds_files_CoursePythonAdult_1/wds_files_CoursePythonAdult_1/sprite_types_cpa1/.idea/sprite_types_cpa1.iml" filepath="$PROJECT_DIR$/../wds_files_CoursePythonAdult_1/wds_files_CoursePythonAdult_1/sprite_types_cpa1/.idea/sprite_types_cpa1.iml" />
+    </modules>
+  </component>
+</project>
