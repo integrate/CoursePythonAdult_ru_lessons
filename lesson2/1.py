@@ -29,11 +29,11 @@ time.sleep(1)
 wrap.sprite.add_text(text2, 150, 40, True, "arial", 15)
 time.sleep(1)
 
-wrap.action.move_to_pos(1, 250, 100)
-wrap.action.move_to_pos(0, 150, 100)
+wrap.actions.move_to(1, 250, 100)
+wrap.actions.move_to(0, 150, 100)
 
-wrap.action.move_to_pos(1, 300, 150)
-wrap.action.move_to_pos(0, 250, 100)
+wrap.actions.move_to(1, 300, 150)
+wrap.actions.move_to(0, 250, 100)
 
-wrap.action.move_to_pos(1, 300, 250)
-wrap.action.move_to_pos(0, 300, 150)
+wrap.actions.move_to(1, 300, 250)
+wrap.actions.move_to(0, 300, 150)

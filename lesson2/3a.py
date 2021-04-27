@@ -41,9 +41,9 @@ wrap.sprite.add_text("Point 2", x2, y2-15, True, "Arial", 10, True)
 wrap.sprite.add("pacman", x3, y3, "dot")
 wrap.sprite.add_text("Point 3", x3, y3-15, True, "Arial", 10, True)
 
-wrap.action.move_to_pos(0, x1, y1)
+wrap.actions.move_to(0, x1, y1)
 
-wrap.action.move_to_pos(0, x2, y2)
+wrap.actions.move_to(0, x2, y2)
 
-wrap.action.move_to_pos(0, x3, y3)
+wrap.actions.move_to(0, x3, y3)
 
