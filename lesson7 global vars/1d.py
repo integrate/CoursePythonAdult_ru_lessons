@@ -24,10 +24,10 @@ def go_random():
     while count < steps_count:
         sprite.move(mario, speed, 0)
 
-        if sprite.is_collide_sprite(mario, coin):
-            add_coin()
-            coins+=1
-            sprite_text.set_text(coins_text, "Coins:"+str(coins))
+        if sprite.is_exist(coin) and sprite.is_collide_sprite(mario, coin):
+            coins += 1
+            sprite_text.set_text(coins_text, "Coins:" + str(coins))
+            sprite.remove(coin)
             break
 
         count += 1
@@ -36,10 +36,17 @@ def go_random():
 
 
 def add_coin():
-    global coin
+    global time_last_coin, coin
+    now = time.time()
+    if now - time_last_coin < 3:
+        return
+    time_last_coin = now
+
     rand_x = random.randint(150, 350)
 
-    sprite.remove(coin)
+    if sprite.is_exist(coin):
+        sprite.remove(coin)
+
     coin = sprite.add("mario-items", rand_x, 200, "coin")
 
 
@@ -47,11 +54,13 @@ world.create_world(500, 250, 300, 500)
 world.set_back_color(100, 200, 200)
 
 mario = sprite.add("mario-1-big", 30, 200, "stand")
-coin = sprite.add("mario-items", 30, 200, "coin", False)
+coin = sprite.add("mario-items", -30, 200, "coin", True)
+
+time_last_coin = time.time()
 
 coins = 0
-coins_text = sprite.add_text("Coins:"+str(coins), 100, 30)
+coins_text = sprite.add_text("Coins:" + str(coins), 100, 30)
 
-add_coin()
 while True:
     go_random()
+    add_coin()

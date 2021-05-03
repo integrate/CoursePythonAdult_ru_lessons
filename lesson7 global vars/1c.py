@@ -28,7 +28,12 @@ def go_random():
 
 
 def add_coin():
-    global coin
+    global time_last_coin, coin
+    now = time.time()
+    if now - time_last_coin < 3:
+        return
+    time_last_coin = now
+
     rand_x = random.randint(150, 350)
 
     sprite.remove(coin)
@@ -39,7 +44,9 @@ world.create_world(500, 250, 300, 500)
 world.set_back_color(100, 200, 200)
 
 mario = sprite.add("mario-1-big", 30, 200, "stand")
-coin = sprite.add("mario-items", 30, 200, "coin", False)
+coin = sprite.add("mario-items", -30, 200, "coin", False)
+
+time_last_coin = time.time()
 
 while True:
     go_random()
