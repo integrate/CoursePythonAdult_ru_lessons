@@ -1,3 +1,7 @@
+"""
+Переписываем полет мяча к игроку через def.
+"""
+
 import time
 from wrap import world, sprite
 

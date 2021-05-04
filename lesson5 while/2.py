@@ -63,7 +63,7 @@ while not sprite.is_collide_sprite(hammer, mario):
         mario_speed_y=3
 
     # движение и поворот молоточка
-    sprite.move_at_angle_point(hammer, hammer_goal_x, hammer_goal_y, 30)
+    sprite.move_at_angle_point(hammer, hammer_goal_x, hammer_goal_y, 20)
     angle = sprite.get_angle(hammer)
     sprite.set_angle(hammer, angle+10)
 
