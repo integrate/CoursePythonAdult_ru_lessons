@@ -1,5 +1,4 @@
 import wrap, time
-from wrap import world
 
 wrap.world.create_world(450, 600, 900, 60)
 wrap.world.set_back_color(100, 100, 100)
