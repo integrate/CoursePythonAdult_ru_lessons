@@ -6,8 +6,10 @@
 
 import wrap
 
-width = 300
-height = 600
+coll=[[300, 600], [600, 800], [800,400], [400, 800], [300, 300]]
+num=3
+width = coll[num][0]
+height = coll[num][1]
 
 
 
