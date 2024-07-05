@@ -1,7 +1,7 @@
 import wrap, time
 
 wrap.world.create_world(800, 600, 900, 60)
-wrap.world.set_back_color(100, 100, 100)
+wrap.world.set_back_color(226, 226, 165)
 
 wrap.add_sprite_dir("sprites")
 
